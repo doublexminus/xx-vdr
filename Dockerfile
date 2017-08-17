@@ -61,5 +61,3 @@ EXPOSE 2004 3000 6420 8002 8008 4010-4020/udp 34890
 VOLUME /recordings /etc/vdr /vdr/config /vdr/cache
 	
 ENTRYPOINT ["/init"]
-
-#docker run -it -p 2004:2004 -p 6420:6420 -p 8002:8002 -p 8008:8008 -p 3000:3000 -p 4010-4020:4010-4020/udp -p 34890:34890 -v E:/Docker/VDR/xx-media/configs:/vdr/config -v E:/Docker/VDR/xx-media/recordings:/recordings fe519f21e634
