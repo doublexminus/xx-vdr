@@ -1,0 +1,7 @@
+#!/bin/sh
+rm -rf /vdr/config/bak_hourly
+mkdir -p /vdr/config/bak_hourly
+cp --parents -a -v /var/lib/vdr/* /vdr/config/bak_hourly
+cp --parents -a -v /etc/vdr/* /vdr/config/bak_hourly
+cp -a -v /var/lib/vdr/plugins/epgsearch/epgsearch.conf /vdr/config/var/lib/vdr/plugins/epgsearch/epgsearch.conf
+cp -a -v /var/lib/vdr/timers.conf /vdr/config/var/lib/vdr/timers.conf

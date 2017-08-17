@@ -1,4 +1,4 @@
-FROM doublexminus/xx-ubuntu-s6-base:latest
+FROM doublexminus/xx-ubuntu-s6-base
 MAINTAINER DoubleXMinus <doublexminus@web.de>
 
 WORKDIR /tmp
