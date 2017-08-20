@@ -18,5 +18,10 @@
 	* 8002
 	* 8008 - VDR-Live
 	* 4010-4020/udp - SatIp (rtsp-ports)
+* Volumes:
+	* /recordings
+	* /etc/vdr
+	* /vdr/config
+	* /vdr/cache
 
 docker run -i -t -v /path/to/config:/config -p port_local:port_container doublexminus/xx-vdr
