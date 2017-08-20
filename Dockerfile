@@ -1,4 +1,4 @@
-FROM doublexminus/xx-ubuntu-s6-base
+FROM doublexminus/xx-ubuntu14.04-s6-base
 MAINTAINER DoubleXMinus <doublexminus@web.de>
 
 WORKDIR /tmp
@@ -45,9 +45,9 @@ RUN apt-get purge -y binutils build-essential bzip2 cpp cpp-4.8 dpkg-dev fakeroo
 RUN apt-get autoremove -qy $(apt-cache showsrc vdr-plugin-satip | sed -e '/Build-Depends/!d;s/Build-Depends: \|,\|([^)]*),*\|\[[^]]*\]//g')
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-COPY vdr.sh /etc/services.d/vdr/run
-COPY vdr-finish.sh /etc/services.d/vdr/finish
-COPY rsyslog.sh /etc/services.d/rsyslog/run
+COPY /config/basic/vdr.sh /etc/services.d/vdr/run
+COPY /config/basic/vdr-finish.sh /etc/services.d/vdr/finish
+COPY /config/basic/rsyslog.sh /etc/services.d/rsyslog/run
 
 # Configure the vdr user account and it's folders
 RUN groupmod -o -g 666 vdr \
@@ -55,7 +55,7 @@ RUN groupmod -o -g 666 vdr \
  && install -o vdr -g vdr -d /recordings /vdr/config /vdr/cache
 
 # add configs
-COPY /configs/etc/rsyslog.conf /etc/
+COPY /config/etc/rsyslog.conf /etc/
 
 EXPOSE 2004 3000 6420 8002 8008 4010-4020/udp 34890
 VOLUME /recordings /etc/vdr /vdr/config /vdr/cache
