@@ -1,8 +1,8 @@
 # xx-vdr
-Based on doublexminus/xx-ubuntu14.04-s6-base
- 
-Added VDR-Installation from yavdr-PPAs (http://ppa.launchpad.net/yavdr/)
-Added vdr-plugin-satip from sources (https://github.com/rofafor/vdr-plugin-satip/archive/vdr-2.2.x.tar.gz)
+* based on doublexminus/xx-ubuntu14.04-s6-base
+
+* added VDR-Installation from yavdr-PPAs (http://ppa.launchpad.net/yavdr/)
+* added vdr-plugin-satip from sources (https://github.com/rofafor/vdr-plugin-satip/archive/vdr-2.2.x.tar.gz)
 
 ## Usage
 * Exposed Ports:
